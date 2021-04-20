@@ -10,21 +10,21 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
-          children: <Widget>[
-            NavigationBar(),
-            ActiveBar(),
+        children: <Widget>[
+          NavigationBar(),
+          ActiveBar(),
+          Row(children: <Widget>[
             Expanded(
-              child: Row(
-                children: <Widget> [
-                  EmployeeSearch(),
-                  SiteInfo(),
-                  
-                ]
-              ) 
-            )
-
-          ],
-        ),
+              child: EmployeeSearch(),
+              flex: 1,
+            ),
+            Expanded(
+              child: SiteInfo(),
+              flex: 3,
+            ),
+          ])
+        ],
+      ),
     );
   }
 }
