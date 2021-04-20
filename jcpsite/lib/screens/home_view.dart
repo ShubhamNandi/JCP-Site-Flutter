@@ -3,6 +3,7 @@ import 'package:jcpsite/widgets/active_bar.dart';
 import 'package:jcpsite/widgets/employee_search.dart';
 import 'package:jcpsite/widgets/navigation_bar.dart';
 import 'package:jcpsite/widgets/site_info.dart';
+import 'package:jcpsite/widgets/updates.dart';
 
 class HomeView extends StatelessWidget {
   @override
@@ -22,7 +23,12 @@ class HomeView extends StatelessWidget {
               child: SiteInfo(),
               flex: 3,
             ),
-          ])
+
+          ]),
+          Expanded(
+              child: Updates(),
+              flex: 3,
+            ),
         ],
       ),
     );
